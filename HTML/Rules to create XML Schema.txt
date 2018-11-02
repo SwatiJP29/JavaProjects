@@ -23,3 +23,6 @@ Create XSD File
 
 4.Define the first (ROOT) element for targeted XML files:
 	<xsd:element name="product">
+
+xsd:SimpleType
+This is where we give the rules for the elements/
