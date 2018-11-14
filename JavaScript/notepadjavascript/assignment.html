@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Employee Form</title>
+    <script>
+    function validateEmployeeID()
+    {
+        var x = document.forms["myForm"]["EmployeeID"].value;
+        
+        if(x==""&&x.toString.length<6)
+        {
+            alert("Name must be filled out");
+            return false;
+        }
+    }
+    </script>
+
+</head>
+<body>
+        <form name = "myForm" action="result.html" onsubmit="return validateEmployeeID()" method="POST">
+            Enter Employee ID:
+            <input id = "emp_id" type="text" name="EmployeeID">
+            <br>
+            Enter Employee Name:
+            <input id = "emp_name" type="text" name="EmpName">
+            <br>
+            Choose Domain
+            <select id="domain">
+                <option value="JEE">JEE</option>
+                <option value=".NET">.NET</option>
+            </select>
+            <br>
+            Choose Module
+            <select id="module">
+                <option value="CoreJava">CoreJava</option>
+                <option value="Serverlet-JSP">Serverlet-JSP</option>
+                <option value="Spring">Spring</option>
+                <option value="C#">C#</option>
+                <option value="ADO.NET">ADO.NET</option>
+                <option value="ASP.NET">ASP.NET</option>
+            </select>
+            <br>
+            Enter MPT Marks
+            <input id = "mptmarks" type="text" name="MPTMarks" type="number">
+            <br>
+            Enter MTT Marks
+            <input id = "mttmarks" type="text" name="MTTMarks" type="number">
+            <br>
+            Enter Assignment Marks
+            <input id = "assignment_marks" type="text" name="AssignmentMarks" type="number">
+            <br>
+            
+            <input type="submit" value="Submit">
+          </form>
+</body>
+</html>
